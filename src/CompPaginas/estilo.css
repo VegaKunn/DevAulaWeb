@@ -1,0 +1,209 @@
+/*Var testes*/ /* https://www.youtube.com/watch?v=PB-4apxb6Mo */
+#cor {
+  width: 100px;
+}
+
+:root {
+  --primary-color: rgb(44, 44, 44);
+  --secundary-color: rgb(37, 37, 37);
+  --tertiary-color: rgb(246, 246, 246);
+  --bloco: rgb(162, 161, 230);
+}
+
+.darkMode {
+  --primary-color: rgb(255, 255, 255);
+  --secundary-color: rgb(0, 33, 221);
+  --tertiary-color: rgb(255, 255, 255);
+  --bloco: rgb(162, 161, 230);
+}
+
+/* CSS da ESCRITA */
+
+#icon {
+  width: 50px;
+}
+.hbutton {
+  width: 100px;
+  height: 50px;
+}
+
+h1,
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4em;
+  margin: 0 auto;
+  text-align: center;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-indent: 1em;
+  font-weight: 700;
+}
+
+#ulCab {
+  list-style-type: none;
+  text-align: center;
+  font-size: 2em;
+}
+.liCab {
+  background: linear-gradient(to bottom, #0080ff 5%, #4ea6ff 100%);
+  background-color: #5daeff;
+  border-radius: 6px;
+  border: 1px solid #2c6cac;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px 45px;
+  text-decoration: none;
+  margin: 20px 4px 1px;
+}
+
+.conteinerGrid {
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: 150px 105% 130px;
+  grid-template-areas: "h h h" "a m b" "f f f";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+}
+
+.menuInicial {
+  text-align: center;
+  margin: 15px;
+}
+
+.liNav {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+  background-color: rgb(255, 166, 0);
+  color: white;
+  padding: 10px 20px;
+  box-decoration-break: none;
+  margin: 2px;
+}
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--secundary-color);
+  grid-area: h;
+}
+main {
+  padding: 1% 1%;
+  background-color: var(--tertiary-color);
+
+  grid-area: m;
+}
+aside {
+  display: flex;
+  background-color: var(--primary-color);
+
+  grid-area: a;
+}
+#asside {
+  background-color: var(--primary-color);
+  grid-area: b;
+}
+footer {
+  background-color: var(--secundary-color);
+
+  grid-area: f;
+}
+
+/* GRID DO INTERIOR*/
+
+#PX {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.XP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  list-style-type: none;
+  border-radius: 10px;
+  margin: 8px 4px;
+  padding-top: 0%;
+  width: 220px;
+  height: 380px;
+  box-shadow: 0 0 2px 0px; /* primeira unidade é a largura da imagem e a segunda a força */
+  background: linear-gradient(
+    -45deg,
+    #ee76527e,
+    #e73c7e80,
+    #23a5d573,
+    #23d5ab98
+  );
+  background-size: 300% 300%;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/* Animações */
+
+#liCab1:hover {
+  background: rgb(0, 89, 255);
+  transition-duration: 0.1s;
+}
+
+#liCab2:hover {
+  background: rgb(1, 232, 253);
+  transition-duration: 0.1s;
+  color: black;
+}
+
+#liCab3:hover {
+  background: rgb(255, 255, 0);
+  transition-duration: 0.1s;
+  color: black;
+}
+
+.XP:hover {
+  background: rgb(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 0.5s ease forwards;
+  cursor: pointer;
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+#link {
+  text-decoration: none;
+  color: black;
+  box-decoration-break: none;
+} /* RESPONSIVIDADE */
+
+@media only screen and (max-width: 1400px) {
+  .conteinerGrid {
+    grid-template-areas: "h" "m" "f";
+    grid-template-columns: 1fr;
+  }
+}
